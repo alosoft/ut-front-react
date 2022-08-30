@@ -57,6 +57,7 @@ class DocumentsContainer extends Component {
             attachments,
             documents,
             countries,
+            allowedFileTypes,
             documentsChanged,
             fetchArchivedDocuments,
             selectAttachments,
@@ -83,6 +84,7 @@ class DocumentsContainer extends Component {
                 countries={countries}
                 documentsChanged={docsChanged}
                 selectedAttachment={selectedAttachment}
+                allowedFileTypes={allowedFileTypes}
                 requiresFetch={requiresFetch}
                 isLoading={isLoading}
                 fetchArchivedDocuments={fetchArchivedDocuments}
@@ -161,7 +163,8 @@ DocumentsContainer.propTypes = {
     replaceDocument: PropTypes.func.isRequired,
     addDocument: PropTypes.func.isRequired,
     uploadDocument: PropTypes.func.isRequired,
-    pathname: PropTypes.string.isRequired
+    pathname: PropTypes.string.isRequired,
+    allowedFileTypes: PropTypes.array
 };
 
 export default connect(
